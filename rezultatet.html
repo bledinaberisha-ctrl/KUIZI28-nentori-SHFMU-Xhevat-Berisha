@@ -1,0 +1,88 @@
+<!DOCTYPE html> 
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <title>Rezultatet e Kuizit</title>
+    <style>
+        body { background: #111; color: white; font-family: Arial, sans-serif; padding: 20px; }
+        .container { width: 80%; margin: auto; background: #1a1a1a; padding: 25px; border-radius: 10px; border: 2px solid red; box-shadow: 0 0 15px red; text-align: center; }
+        h1 { color: red; }
+        p { font-size: 18px; line-height: 1.6; }
+        .score { font-size: 24px; font-weight: bold; margin: 15px 0; color: #ffcc00; }
+        .credits { margin-top: 20px; font-size: 16px; color: #ccc; }
+        ul { list-style: none; padding: 0; }
+        li { margin: 5px 0; }
+
+        .photos-section { margin-top: 40px; }
+        .photos-title { font-size: 22px; margin-bottom: 20px; color: #ff4444; }
+
+        .photo-box {
+            display: inline-block;
+            margin: 15px;
+            text-align: center;
+        }
+
+        .photo-box img {
+            width: 180px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 2px solid red;
+            box-shadow: 0 0 10px red;
+        }
+
+        .photo-name {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffcc00;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Urime Festën e 28 Nëntorit!</h1>
+    <p>Këtu janë pikët e tua nga kuizi:</p>
+    <div class="score" id="score"></div>
+
+    <p><b>Kuriozitet:</b> Flamuri kuqezi me shqiponjën dykrenare, i ngritur për herë të parë në Vlorë më 28 Nëntor 1912, simbolizon jo vetëm pavarësinë, por edhe unitetin e shqiptarëve kudo në botë!</p>
+
+    <p>Urojmë të gjithë të rinjtë dhe të rriturit që të mbajnë gjallë shpirtin e kësaj dite të shenjtë dhe krenarinë kombëtare! 🇦🇱</p>
+
+  
+    <!-- FOTO TË NXËNËSVE -->
+    <div class="photos-section">
+        <div class="photos-title">Krijuesit e Kuizit</div>
+
+        <div class="photo-box">
+            <img src="rona.jpg" alt="Rona Krasniqi">
+            <div class="photo-name">Rona Krasniqi</div>
+        </div>
+
+        <div class="photo-box">
+            <img src="nexhat.jpg" alt="Nexhat Berisha">
+            <div class="photo-name">Nexhat Berisha</div>
+        </div>
+
+        <div class="photo-box">
+            <img src="erlinda.jpg" alt="Erlinda Bytyqi">
+            <div class="photo-name">Erlinda Bytyqi</div>
+        </div>
+
+        <div class="photo-box">
+            <img src="lenita.jpg" alt="Lenita Krasniqi">
+            <div class="photo-name">Lenita Krasniqi</div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+let score = sessionStorage.getItem('quizScore');
+if (score === null) score = 0;
+document.getElementById('score').innerText = score + "/10 pikë";
+</script>
+
+</body>
+</html>

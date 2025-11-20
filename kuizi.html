@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <title>Kuizi i 28 Nëntorit</title>
+    <style>
+        body { background: #111; color: white; font-family: Arial, sans-serif; padding: 20px; }
+        .container { width: 80%; margin: auto; background: #1a1a1a; padding: 25px; border-radius: 10px; border: 2px solid red; box-shadow: 0 0 15px red; }
+        h1 { text-align: center; color: red; }
+        .question { margin-bottom: 20px; padding: 15px; background: #2b2b2b; border-left: 4px solid red; border-radius: 8px; }
+        .btn { display: block; margin: 20px auto; width: 250px; padding: 12px; background: red; color: white; text-align: center; border-radius: 10px; font-size: 18px; cursor: pointer; border: none; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Kuizi i Festës së 28 Nëntorit</h1>
+
+    <form id="quizForm">
+
+        <!-- PYETJA 1 -->
+        <div class="question">
+            <p>1. Çfarë feste shënohet më 28 Nëntor?</p>
+            <label><input type="radio" name="q1" value="1"> Dita e Pavarësisë së Shqipërisë</label><br>
+            <label><input type="radio" name="q1" value="0"> Dita e Flamurit të Kosovës</label><br>
+            <label><input type="radio" name="q1" value="0"> Festë e pranverës</label>
+        </div>
+
+        <!-- PYETJA 2 -->
+        <div class="question">
+            <p>2. Cili është viti kur Shqipëria shpalli pavarësinë?</p>
+            <label><input type="radio" name="q2" value="1"> 1912</label><br>
+            <label><input type="radio" name="q2" value="0"> 1945</label><br>
+            <label><input type="radio" name="q2" value="0"> 1878</label>
+        </div>
+
+        <!-- PYETJA 3 -->
+        <div class="question">
+            <p>3. Në cilin qytet u shpall pavarësia e Shqipërisë?</p>
+            <label><input type="radio" name="q3" value="0"> Prizren</label><br>
+            <label><input type="radio" name="q3" value="1"> Vlorë</label><br>
+            <label><input type="radio" name="q3" value="0"> Tiranë</label>
+        </div>
+
+        <!-- PYETJA 4 -->
+        <div class="question">
+            <p>4. Kush e ngriti flamurin në Vlorë më 28 Nëntor 1912?</p>
+            <label><input type="radio" name="q4" value="1"> Ismail Qemali</label><br>
+            <label><input type="radio" name="q4" value="0"> Isa Boletini</label><br>
+            <label><input type="radio" name="q4" value="0"> Gjergj Kastrioti Skënderbeu</label>
+        </div>
+
+        <!-- PYETJA 5 -->
+        <div class="question">
+            <p>5. Cili është simboli kryesor i 28 Nëntorit?</p>
+            <label><input type="radio" name="q5" value="1"> Flamuri kuqezi</label><br>
+            <label><input type="radio" name="q5" value="0"> Lulja e pranverës</label><br>
+            <label><input type="radio" name="q5" value="0"> Kulla e Sahatit</label>
+        </div>
+
+        <!-- PYETJA 6 -->
+        <div class="question">
+            <p>6. Çfarë ngjarje tjetër përkujtohet më 28 Nëntor?</p>
+            <label><input type="radio" name="q6" value="1"> Ngritja e flamurit të Skënderbeut në Krujë</label><br>
+            <label><input type="radio" name="q6" value="0"> Ditëlindja e Skënderbeut</label><br>
+            <label><input type="radio" name="q6" value="0"> Çlirimi i Kosovës</label>
+        </div>
+
+        <!-- PYETJA 7 -->
+        <div class="question">
+            <p>7. Ngjyrat e flamurit shqiptar janë:</p>
+            <label><input type="radio" name="q7" value="1"> E kuqe dhe e zezë</label><br>
+            <label><input type="radio" name="q7" value="0"> E bardhë dhe blu</label><br>
+            <label><input type="radio" name="q7" value="0"> Jeshile dhe e verdhë</label>
+        </div>
+
+        <!-- PYETJA 8 -->
+        <div class="question">
+            <p>8. Kush është Heroi Kombëtar i shqiptarëve?</p>
+            <label><input type="radio" name="q8" value="1"> Skënderbeu</label><br>
+            <label><input type="radio" name="q8" value="0"> Adem Jashari</label><br>
+            <label><input type="radio" name="q8" value="0"> Hasan Prishtina</label>
+        </div>
+
+        <!-- PYETJA 9 -->
+        <div class="question">
+            <p>9. Në cilin vit festohet 28 Nëntori i parë pas shpalljes së pavarësisë?</p>
+            <label><input type="radio" name="q9" value="1"> 1913</label><br>
+            <label><input type="radio" name="q9" value="0"> 1912</label><br>
+            <label><input type="radio" name="q9" value="0"> 1920</label>
+        </div>
+
+        <!-- PYETJA 10 -->
+        <div class="question">
+            <p>10. Cili ishte funksioni i Ismail Qemalit?</p>
+            <label><input type="radio" name="q10" value="1"> Kryetar i Qeverisë së Përkohshme</label><br>
+            <label><input type="radio" name="q10" value="0"> Komandant ushtarak</label><br>
+            <label><input type="radio" name="q10" value="0"> Kronist i ngjarjes</label>
+        </div>
+
+        <!-- BUTONI PER TE SHKUAR TE REZULTATET -->
+        <button type="button" class="btn" onclick="saveScore()">Kliko këtu për të parë pikët</button>
+
+    </form>
+
+</div>
+
+<script>
+function saveScore() {
+    let total = 0;
+    for (let i = 1; i <= 10; i++) {
+        let ans = document.querySelector('input[name="q' + i + '"]:checked');
+        if (ans) total += parseInt(ans.value);
+    }
+    sessionStorage.setItem('quizScore', total);
+    window.location.href = "rezultatet.html";
+}
+</script>
+
+</body>
+</html>
